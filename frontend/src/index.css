@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Dark Mode Toggle */
+body.light-mode {
+  background-color: white;
+  color: black;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+.dark-mode-toggle {
+  width: 3.5rem;
+  height: 2rem;
+  background-color: #ccc;
+  border-radius: 999px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0.25rem;
+}
+
+.dark-mode-toggle.active {
+  background-color: #444;
+}
+
+.dark-mode-toggle div {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  transition: transform 0.3s ease;
+}
+
+.dark-mode-toggle.active div {
+  transform: translateX(1.5rem);
+}
